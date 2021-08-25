@@ -4,14 +4,15 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 @XmlType
-@XmlRootElement(name="user")
+@XmlRootElement(name = "user")
 public class User {
     private String login;
     private String password;
     private UserRole role;
 
-    public User(){
+    public User() {
     }
+
     public User(String login, String password, UserRole role) {
         this.login = login;
         this.password = password;

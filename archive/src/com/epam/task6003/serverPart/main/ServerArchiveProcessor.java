@@ -33,8 +33,8 @@ public class ServerArchiveProcessor {
         reader = new BufferedReader(new InputStreamReader(inputStream));
         writer = new BufferedWriter(new OutputStreamWriter(outputStream));
 
-        this.users=users;
-        this.students=students;
+        this.users = users;
+        this.students = students;
     }
 
     public void start(String studentsFileName) throws IOException, JAXBException {
@@ -43,12 +43,11 @@ public class ServerArchiveProcessor {
         while (!endingSession) {
             try {
                 processRequests(studentsFileName);
-            } catch(SocketException exc){
-                endingSession=true;
+            } catch (SocketException exc) {
+                endingSession = true;
             }
         }
     }
-
 
 
     public void initializeUser() throws IOException {
@@ -96,7 +95,7 @@ public class ServerArchiveProcessor {
         } else if (request.equals("add")) {
             addStudent();
             DataUtil.unloadStudents(studentsFileName, students);
-        } else if(request.equals("exit")){
+        } else if (request.equals("exit")) {
             endingSession = true;
         }
     }

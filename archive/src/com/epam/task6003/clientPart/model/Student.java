@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 
-@XmlType(name="student")
+@XmlType(name = "student")
 @XmlRootElement
 public class Student {
     private int id;
@@ -44,7 +44,7 @@ public class Student {
     }
 
     public void setSurname(String surname) {
-        if(surname!=null && surname.matches("[a-zA-zа-яА-яЁё]+-?[a-zA-zа-яА-яЁё]+")){
+        if (surname != null && surname.matches("[a-zA-zа-яА-яЁё]+-?[a-zA-zа-яА-яЁё]+")) {
             this.surname = surname;
         } else {
             throw new IllegalArgumentException("Incorrect surname!");
@@ -56,7 +56,7 @@ public class Student {
     }
 
     public void setName(String name) {
-        if(name!=null && name.matches("[a-zA-zа-яА-яЁё]+-?[a-zA-zа-яА-яЁё]+")){
+        if (name != null && name.matches("[a-zA-zа-яА-яЁё]+-?[a-zA-zа-яА-яЁё]+")) {
             this.name = name;
         } else {
             throw new IllegalArgumentException("Incorrect name!");
@@ -68,7 +68,7 @@ public class Student {
     }
 
     public void setPatronymic(String patronymic) {
-        if(patronymic!=null && patronymic.matches("[a-zA-zа-яА-яЁё]+")){
+        if (patronymic != null && patronymic.matches("[a-zA-zа-яА-яЁё]+")) {
             this.patronymic = patronymic;
         } else {
             throw new IllegalArgumentException("Incorrect patronymic!");
@@ -93,9 +93,9 @@ public class Student {
                 "|(([12][0-9]([02468][048]|[13579][26]))-(02)-(29))";
         LocalDate date;
 
-        if(birthdayDateString.matches(dateRegex)){
+        if (birthdayDateString.matches(dateRegex)) {
             date = LocalDate.parse(birthdayDateString);
-            if(date.isBefore(LocalDate.now().minusYears(15))){
+            if (date.isBefore(LocalDate.now().minusYears(15))) {
                 this.birthdayDate = date;
                 return;
             }
@@ -108,9 +108,9 @@ public class Student {
     }
 
     public void setGroup(int group) {
-        if(group>0 && group<=10) {
+        if (group > 0 && group <= 10) {
             this.group = group;
-        } else{
+        } else {
             throw new IllegalArgumentException("Incorrect group!");
         }
     }
@@ -120,9 +120,9 @@ public class Student {
     }
 
     public void setCourse(int course) {
-        if(course>0 && course<=6) {
+        if (course > 0 && course <= 6) {
             this.course = course;
-        } else{
+        } else {
             throw new IllegalArgumentException("Incorrect course!");
         }
     }

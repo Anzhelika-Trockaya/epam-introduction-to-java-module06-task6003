@@ -25,6 +25,7 @@ public class DataUtil {
 
         return usersData.getUsers();
     }
+
     public static ArrayList<Student> loadStudents(String fileName) throws IOException, JAXBException {
         FileInputStream reader = new FileInputStream(fileName);
         JAXBContext context = JAXBContext.newInstance(StudentsData.class);
@@ -47,6 +48,7 @@ public class DataUtil {
 
         marshaller.marshal(usersData, output);
     }
+
     public static void unloadStudents(String fileName, ArrayList<Student> studentsList) throws FileNotFoundException, JAXBException {
         StudentsData studentsData = new StudentsData(studentsList);
         FileOutputStream output = new FileOutputStream(fileName);

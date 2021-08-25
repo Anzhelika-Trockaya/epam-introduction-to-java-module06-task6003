@@ -7,13 +7,16 @@ import javax.xml.bind.annotation.XmlType;
 
 import java.util.ArrayList;
 
-@XmlType(name="usersData")
+@XmlType(name = "usersData")
 @XmlRootElement
 public class UsersData {
     private ArrayList<User> users;
-    public UsersData(){}
-    public UsersData(ArrayList<User> users){
-        this.users=users;
+
+    public UsersData() {
+    }
+
+    public UsersData(ArrayList<User> users) {
+        this.users = users;
     }
 
     public void setUsers(ArrayList<User> users) {

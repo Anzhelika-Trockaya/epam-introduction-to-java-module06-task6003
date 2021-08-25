@@ -17,13 +17,19 @@ import java.util.ArrayList;
 //Требования к коду лабораторной работы:
 //• Для реализации сетевого соединения используйте сокеты.
 //• Формат хранения данных на сервере – xml-файлы.
+//
+//login: Admin
+//password: 123
+//
+//login: User
+//password: 456
 
 public class ServerMain {
+    private static final String STUDENTS_DATA_XML = "archive/src/com/epam/task6003/serverPart/data/studentsData.xml";
+    private static final String USERS_DATA_XML = "archive/src/com/epam/task6003/serverPart/data/usersData.xml";
+
     private static ArrayList<Student> students;
     private static ArrayList<User> users;
-
-    private static final String studentsFileName = "archive/src/com/epam/task6003/serverPart/data/studentsData.xml";
-    private static final String usersFileName = "archive/src/com/epam/task6003/serverPart/data/usersData.xml";
 
     public static void main(String[] args) throws IOException, JAXBException {
         ServerSocket serverSocket = new ServerSocket(8000);
@@ -37,7 +43,7 @@ public class ServerMain {
             OutputStream outputStream = clientSocket.getOutputStream();
 
             serverArchiveProcessor = new ServerArchiveProcessor(inputStream, outputStream, users, students);
-            serverArchiveProcessor.start(studentsFileName);
+            serverArchiveProcessor.start(STUDENTS_DATA_XML);
 
             inputStream.close();
             outputStream.close();
@@ -46,8 +52,8 @@ public class ServerMain {
     }
 
     private static void loadData() throws IOException, JAXBException {
-        users = DataUtil.loadUsers(usersFileName);
-        students = DataUtil.loadStudents(studentsFileName);
+        users = DataUtil.loadUsers(USERS_DATA_XML);
+        students = DataUtil.loadStudents(STUDENTS_DATA_XML);
         System.out.println("Data loaded.");
     }
 

@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.time.LocalDate;
 
-@XmlType(name="student")
+@XmlType(name = "student")
 @XmlRootElement
 public class Student {
     private static int currentId = 1;
@@ -91,15 +91,15 @@ public class Student {
         this.course = course;
     }
 
-    public static int currentId(){
+    public static int currentId() {
         return currentId;
     }
 
-    public static void changeCurrentId(int value){
-        currentId=value;
+    public static void changeCurrentId(int value) {
+        currentId = value;
     }
 
-    public static void incrementCurrentId(){
+    public static void incrementCurrentId() {
         currentId++;
     }
 }

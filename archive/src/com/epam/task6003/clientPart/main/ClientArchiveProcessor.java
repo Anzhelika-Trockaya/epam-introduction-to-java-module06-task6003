@@ -13,10 +13,10 @@ import java.time.LocalDate;
 import java.util.Scanner;
 
 public class ClientArchiveProcessor {
-    BufferedReader reader;
-    BufferedWriter writer;
-    InputStream inputStream;
-    OutputStream outputStream;
+    private final BufferedReader reader;
+    private final BufferedWriter writer;
+    private final InputStream inputStream;
+    private final OutputStream outputStream;
     private final Scanner scanner;
 
     public ClientArchiveProcessor(InputStream inputStream, OutputStream outputStream) {

@@ -12,13 +12,19 @@ import java.io.*;
 //Требования к коду лабораторной работы:
 //• Для реализации сетевого соединения используйте сокеты.
 //• Формат хранения данных на сервере – xml-файлы.
+//
+//login: Admin
+//password: 123
+//
+//login: User
+//password: 456
 
 public class ClientMain {
     private static Socket socket;
 
     public static void main(String[] args) throws IOException, JAXBException {
         socket = new Socket("127.0.0.1", 8000);
-        InputStream inputStream= socket.getInputStream();
+        InputStream inputStream = socket.getInputStream();
         OutputStream outputStream = socket.getOutputStream();
 
         ClientArchiveProcessor clientArchiveProcessor = new ClientArchiveProcessor(inputStream, outputStream);
