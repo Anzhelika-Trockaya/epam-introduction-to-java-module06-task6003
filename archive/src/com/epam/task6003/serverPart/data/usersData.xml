@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<usersData>
+    <users>
+        <login>Admin</login>
+        <password>UVW</password>
+        <role>Admin</role>
+    </users>
+    <users>
+        <login>User</login>
+        <password>XYZ</password>
+        <role>User</role>
+    </users>
+</usersData>
