@@ -1,0 +1,23 @@
+<students>
+    <birthdayDate>1993-02-24</birthdayDate>
+    <basisOfEducation>Budgetary</basisOfEducation>
+    <course>1</course>
+    <formOfEducation>Extramural studies</formOfEducation>
+    <group>1</group>
+    <id>6</id>
+    <married>true</married>
+    <name>Anzhelika</name>
+    <passport>
+        <dateOfIssue>2018-10-14</dateOfIssue>
+        <birthPlace>Dotishki</birthPlace>
+        <identificationNumber>66646856AB5PB6</identificationNumber>
+        <issuedBy>Voronovskiy ROVD Grodnenskoy obl</issuedBy>
+        <number>KH9876352</number>
+    </passport>
+    <patronymic>Victorovna</patronymic>
+    <registrationAddress>Grodnenskaya obl, Voronovskiy r-n, ag.Dotishki</registrationAddress>
+    <residenceAddress>Grodnenskaya obl, Voronovskiy r-n, ag.Dotishki</residenceAddress>
+    <sex>Female</sex>
+    <surname>Trockaya</surname>
+    <yearOfEnrollment>2021</yearOfEnrollment>
+</students>
